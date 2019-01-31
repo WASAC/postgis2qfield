@@ -72,8 +72,36 @@ def saveGeoJsonData(_table, _file, _where):
         jsonfile = open(_file + '.geojson', 'w')
         json.dump(rows[0][0], jsonfile)
 
+def saveGeoJsonDataIntersectsDistrict(_table, _file, _where):
+    query = "SELECT jsonb_build_object("
+    query += "    'type',     'FeatureCollection',"
+    query += "    'features', jsonb_agg(feature)"
+    query += ")"
+    query += "FROM ("
+    query += "  SELECT jsonb_build_object("
+    query += "    'type',       'Feature',"
+    query += "    'geometry',   ST_AsGeoJSON(geom)::jsonb,"
+    query += "    'properties', to_jsonb(row) - 'gid' - 'geom'"
+    query += "  ) AS feature"
+    query += "  FROM (SELECT a.* FROM " + _table + " a "
+    query += "        INNER JOIN district b "
+    query += "        ON ST_INTERSECTS(b.geom,a.geom) = true "
+    # If a WHERE statement was provided, add that
+    if _where is not None:
+        query += " WHERE " + _where
+    query += ") row) features;"
+
+    db = database()
+    db.createConnection()
+    rows = db.execute(query)
+    if len(rows) > 0 and len(rows[0]) > 0:
+        # Write it to a file
+        jsonfile = open(_file + '.geojson', 'w')
+        json.dump(rows[0][0], jsonfile)
+
 def create_qfield_data():
     base_layers = ["district", "sector", "cell", "village"]
+    baseobj_layers = ["rivers_all_rw92", "lakes_all","roads_all","forest_cadastre","national_parks"]
     wss_layers = ["chamber", "pipeline", "pumping_station", "reservoir", "water_connection", "watersource", "wss"]
 
     maindir = datetime.datetime.now().strftime('%Y%m%d_%H%M%S') + "_RWSS_Assets_data"
@@ -96,6 +124,10 @@ def create_qfield_data():
         for layer in wss_layers:
             filepath = "/".join([_datafolder, layer])
             saveGeoJsonData(layer, filepath, "wss_id IN (" + wss_id_list + ")")
+
+        for layer in baseobj_layers:
+            filepath = "/".join([_datafolder, layer])
+            saveGeoJsonDataIntersectsDistrict(layer, filepath, "b.dist_id=" + str(dist_id))
 
         shutil.make_archive("/".join([maindir,str(dist_id) + "_" + district]), 'zip', root_dir=_folder)
         shutil.rmtree(_folder)
