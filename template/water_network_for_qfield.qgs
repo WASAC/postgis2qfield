@@ -7,64 +7,64 @@
     <customproperties/>
     <layer-tree-group expanded="1" checked="Qt::Checked" name="Water_Connections">
       <customproperties/>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="water_connection_5b529dca_9e77_40e4_a3d9_6cce3aaf942b" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/water_connection.geojson|layerid=0|subset=&quot;connection_type&quot; = 'Public Tap'" name="Public Tap">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="water_connection_5b529dca_9e77_40e4_a3d9_6cce3aaf942b" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/water_connection.geojson|layerid=0|subset=&quot;connection_type&quot; = 'Public Tap'" name="Public Tap">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Public_Tap_88c7bcae_119b_414a_b860_d1661c4f837e" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/water_connection.geojson|layerid=0|subset=&quot;connection_type&quot; = 'Public Tap'" name="Water Kiosk">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Public_Tap_88c7bcae_119b_414a_b860_d1661c4f837e" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/water_connection.geojson|layerid=0|subset=&quot;connection_type&quot; = 'Public Tap'" name="Water Kiosk">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::Checked" name="Chambers">
       <customproperties/>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="chamber_45001524_4c21_4281_929e_7a7f7edc3658" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'Air release chamber'" name="Air Release chamber">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="chamber_45001524_4c21_4281_929e_7a7f7edc3658" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'Air release chamber'" name="Air Release chamber">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Air_Release_Chamber_593ce13c_7421_4d19_af62_8752d9abd498" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'Valve chamber'" name="Valve chamber">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Air_Release_Chamber_593ce13c_7421_4d19_af62_8752d9abd498" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'Valve chamber'" name="Valve chamber">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Air_Release_Chamber_copy_53cecefd_97d9_415e_b24f_52693599554e" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'PRV chamber'" name="PRV chamber">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Air_Release_Chamber_copy_53cecefd_97d9_415e_b24f_52693599554e" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'PRV chamber'" name="PRV chamber">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Air_Release_Chamber_copy_copy_25410f36_4bad_495a_b35a_30346dfaa40c" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'Washout chamber'" name="Washout chamber">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Air_Release_Chamber_copy_copy_25410f36_4bad_495a_b35a_30346dfaa40c" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'Washout chamber'" name="Washout chamber">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Washout_chamber_3999d36a_0650_4157_87b4_ffe2a7bf6322" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'Starting chamber'" name="Starting chamber">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Washout_chamber_3999d36a_0650_4157_87b4_ffe2a7bf6322" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'Starting chamber'" name="Starting chamber">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Washout_chamber_copy_75b3060f_3f9e_42e6_8b96_48f34951ec1f" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'Collection chamber'" name="Collection chamber">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Washout_chamber_copy_75b3060f_3f9e_42e6_8b96_48f34951ec1f" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/chamber.geojson|layerid=0|subset=&quot;chamber_type&quot; = 'Collection chamber'" name="Collection chamber">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::Checked" name="Water_Network">
       <customproperties/>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="pumping_station_5e46fd3b_8fb6_4827_9fe8_8f75c7eefd2f" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/pumping_station.geojson" name="pumping_station">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="pumping_station_5e46fd3b_8fb6_4827_9fe8_8f75c7eefd2f" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/pumping_station.geojson" name="pumping_station">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="reservoir_3c2cd178_14cd_45b2_bac2_cd634dcd96e5" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/reservoir.geojson" name="reservoir">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="reservoir_3c2cd178_14cd_45b2_bac2_cd634dcd96e5" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/reservoir.geojson" name="reservoir">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="watersource_58a3d19f_08cc_4a64_8b1e_07b5f5d3ab6b" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/watersource.geojson" name="watersource">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="watersource_58a3d19f_08cc_4a64_8b1e_07b5f5d3ab6b" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/watersource.geojson" name="watersource">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="pipeline_2c5c7dc0_9802_4447_83cb_d20061b7b48e" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/pipeline.geojson" name="pipeline">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="pipeline_2c5c7dc0_9802_4447_83cb_d20061b7b48e" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/pipeline.geojson" name="pipeline">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="wss_b894b6ae_abc8_470a_9a2d_8df587b4a839" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/wss.geojson" name="wss">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="wss_b894b6ae_abc8_470a_9a2d_8df587b4a839" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/wss.geojson" name="wss">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::Checked" name="Administrative">
       <customproperties/>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="district_03f46bb4_b584_4e60_8432_f641c35d32b8" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/district.geojson" name="district">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="district_03f46bb4_b584_4e60_8432_f641c35d32b8" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/district.geojson" name="district">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="sector_8feee505_b9dc_412b_8d5e_a87cb5b36e08" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/sector.geojson" name="sector">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="sector_8feee505_b9dc_412b_8d5e_a87cb5b36e08" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/sector.geojson" name="sector">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="cell_de44da53_a255_4e2a_92b0_edc53b9ae262" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/cell.geojson" name="cell">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="cell_de44da53_a255_4e2a_92b0_edc53b9ae262" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/cell.geojson" name="cell">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="village_b728f48d_f1f6_4a9f_80d2_95fd54bbd6b6" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190130_170904_RWSS_Assets_data/51_Rwamagana/data/village.geojson" name="village">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="village_b728f48d_f1f6_4a9f_80d2_95fd54bbd6b6" source="C:/Users/jin_igarashi/PycharmProjects/wasac_rwss_postgis2qfield/20190131_071548_RWSS_Assets_data/54_Kayonza/data/village.geojson" name="village">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -82,10 +82,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>29.37998774221659914</xmin>
-      <ymin>-2.67409419152000583</ymin>
-      <xmax>30.6953437422166644</xmax>
-      <ymax>-1.20625719152008815</ymax>
+      <xmin>29.37184881960329008</xmin>
+      <ymin>-2.6111060078170194</ymin>
+      <xmax>30.68720481960335533</xmax>
+      <ymax>-1.14326900781710217</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -108,8 +108,8 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Washout_chamber_copy_75b3060f_3f9e_42e6_8b96_48f34951ec1f"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Air_Release_Chamber_593ce13c_7421_4d19_af62_8752d9abd498"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="cell_de44da53_a255_4e2a_92b0_edc53b9ae262"/>
-      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="water_connection_5b529dca_9e77_40e4_a3d9_6cce3aaf942b"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:3857" srcDatumTransform="-1" destDatumTransform="-1" layerid="OpenStreetMap_Standard_1d93e350_1fdc_4639_b088_e589fbe97897"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="water_connection_5b529dca_9e77_40e4_a3d9_6cce3aaf942b"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="pumping_station_5e46fd3b_8fb6_4827_9fe8_8f75c7eefd2f"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="pipeline_2c5c7dc0_9802_4447_83cb_d20061b7b48e"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Air_Release_Chamber_copy_copy_25410f36_4bad_495a_b35a_30346dfaa40c"/>
@@ -782,7 +782,7 @@
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="status" index="0" name=""/>
         <alias field="wss_id" index="1" name=""/>
@@ -1392,7 +1392,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="status" index="0" name=""/>
         <alias field="wss_id" index="1" name=""/>
@@ -2002,7 +2002,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="status" index="0" name=""/>
         <alias field="wss_id" index="1" name=""/>
@@ -2578,7 +2578,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="status" index="0" name=""/>
         <alias field="wss_id" index="1" name=""/>
@@ -3208,7 +3208,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="status" index="0" name=""/>
         <alias field="wss_id" index="1" name=""/>
@@ -3818,7 +3818,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="status" index="0" name=""/>
         <alias field="wss_id" index="1" name=""/>
@@ -4169,7 +4169,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="1" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="cell" index="0" name=""/>
         <alias field="cell_id" index="1" name=""/>
@@ -4756,7 +4756,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="status" index="0" name=""/>
         <alias field="wss_id" index="1" name=""/>
@@ -4963,7 +4963,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="18" placement="1" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="dist_id" index="0" name=""/>
         <alias field="prov_id" index="1" name=""/>
@@ -5301,7 +5301,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="2" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="wss_id" index="0" name=""/>
         <alias field="pipe_id" index="1" name=""/>
@@ -5763,7 +5763,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="kva" index="0" name=""/>
         <alias field="status" index="1" name=""/>
@@ -6265,7 +6265,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="status" index="0" name=""/>
         <alias field="wss_id" index="1" name=""/>
@@ -6478,7 +6478,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="18" placement="1" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="sector" index="0" name=""/>
         <alias field="dist_id" index="1" name=""/>
@@ -6812,7 +6812,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="1" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="cell_id" index="0" name=""/>
         <alias field="dist_id" index="1" name=""/>
@@ -7288,7 +7288,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="status" index="0" name=""/>
         <alias field="wss_id" index="1" name=""/>
@@ -7757,7 +7757,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="status" index="0" name=""/>
         <alias field="wss_id" index="1" name=""/>
@@ -8115,13 +8115,13 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/dist" value="0"/>
         <property key="labeling/distInMapUnits" value="false"/>
         <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/drawLabels" value="false"/>
-        <property key="labeling/enabled" value="false"/>
-        <property key="labeling/fieldName" value=""/>
+        <property key="labeling/drawLabels" value="true"/>
+        <property key="labeling/enabled" value="true"/>
+        <property key="labeling/fieldName" value="wss_name"/>
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
         <property key="labeling/fontFamily" value="MS UI Gothic"/>
-        <property key="labeling/fontItalic" value="false"/>
+        <property key="labeling/fontItalic" value="true"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
         <property key="labeling/fontMaxPixelSize" value="10000"/>
@@ -8130,11 +8130,11 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontSizeInMapUnits" value="false"/>
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
-        <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontUnderline" value="true"/>
+        <property key="labeling/fontWeight" value="75"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="false"/>
-        <property key="labeling/isExpression" value="true"/>
+        <property key="labeling/isExpression" value="false"/>
         <property key="labeling/labelOffsetInMapUnits" value="true"/>
         <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/labelPerPart" value="false"/>
@@ -8147,7 +8147,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="4294967295"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Normal"/>
+        <property key="labeling/namedStyle" value="Bold Italic"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -8222,7 +8222,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/textColorA" value="255"/>
         <property key="labeling/textColorB" value="0"/>
         <property key="labeling/textColorG" value="0"/>
-        <property key="labeling/textColorR" value="0"/>
+        <property key="labeling/textColorR" value="255"/>
         <property key="labeling/textTransp" value="0"/>
         <property key="labeling/upsidedownLabels" value="0"/>
         <property key="labeling/useSubstitutions" value="false"/>
@@ -8287,7 +8287,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="0" showColumn="0" linePlacementFlags="2" placement="0" dist="0" xPosColumn="0" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="status" index="0" name=""/>
         <alias field="wss_id" index="1" name=""/>
