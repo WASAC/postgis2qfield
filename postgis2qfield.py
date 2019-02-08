@@ -3,16 +3,64 @@ import shutil
 import datetime
 import json
 import psycopg2
+import argparse
+
+def createArgumentParser():
+    """
+     Create the parameters for the script
+    """
+
+    parser = argparse.ArgumentParser(
+        description="Create a QField datasets from PostGIS database.",
+        epilog="Example usage: python postgis2qfield.py -d yourdatabase -H localhost - p 5432 -u user -w securePassword -l list_of_distID(seperated by comma)"
+    )
+    parser.add_argument("-d", "--database", dest="database",
+                        type=str, required=True,
+                        help="The database to connect to")
+
+    # Python doesn't let you use -h as an option for some reason
+    parser.add_argument("-H", "--host", dest="host",
+                        default="localhost", type=str,
+                        help="Database host. Defaults to 'localhost'")
+
+    parser.add_argument("-p", "--port", dest="port",
+                        default="5432", type=str,
+                        help="Password for the database user")
+
+    parser.add_argument("-u", "--user", dest="user",
+                        default="postgres", type=str,
+                        help="Database user. Defaults to 'postgres'")
+
+    parser.add_argument("-w", "--password", dest="password",
+                        type=str, required=True,
+                        help="Password for the database user")
+
+    parser.add_argument("-l", "--dist_id", dest="dist_id",
+                        default="", type=str,
+                        help="List of district ID which you want to export. For example, '51,52,53'")
+
+    return parser.parse_args()
 
 class database:
-    def __init__(self):
-        self.host = 'localhost'
-        self.port = 5432
-        self.user = 'postgres'
-        self.password = 'your password'
-        self.database = 'rwss_gis'
+    def __init__(self, params):
+        """
+        Constructor
+
+        Parameters
+        ----------
+        params : object
+            List of arguments from command line
+        """
+        self.host = params.host
+        self.port = params.port
+        self.user = params.user
+        self.password = params.password
+        self.database = params.database
 
     def createConnection(self):
+        """
+        Create the database connection
+        """
         try:
             self.conn = psycopg2.connect(host=self.host, port=self.port, database=self.database, user=self.user, password=self.password)
 
@@ -20,7 +68,15 @@ class database:
             print("Unable to connect to the database. Please check your options and try again.")
             exit()
 
-    def execute(self,query):
+    def execute(self, query):
+        """
+        Execute SQL on PostGIS
+
+        Parameters
+        ----------
+        query : str
+            SQL for running
+        """
         with self.conn.cursor() as cur:
             # Execute the query
             try:
@@ -31,7 +87,30 @@ class database:
             rows = cur.fetchall()
             return rows
 
-def getWssListEachDistrict():
+def save_file(rows, _file):
+    """
+    save the file from result of SQL
+
+    Parameters
+    ----------
+    rows : object
+        result of SQL execute
+    """
+    if len(rows) > 0 and len(rows[0]) > 0:
+        # Write it to a file
+        jsonfile = open(_file + '.geojson', 'w')
+        json.dump(rows[0][0], jsonfile)
+
+def getWssListEachDistrict(db):
+    """
+    Get the list of WSS each district from PostGIS
+
+    Parameters
+    ----------
+    db : database class
+        Object of database class
+    """
+
     query = "SELECT "
     query += "  a.dist_id, "
     query += "  b.district, "
@@ -39,13 +118,27 @@ def getWssListEachDistrict():
     query += "FROM wss a "
     query += "INNER JOIN district b "
     query += "ON a.dist_id = b.dist_id "
+    if len(params.dist_id) > 0:
+        query += "WHERE a.dist_id IN (" + params.dist_id + ")"
     query += "GROUP BY a.dist_id, b.district "
 
-    db = database()
-    db.createConnection()
     return db.execute(query)
 
-def saveGeoJsonData(_table, _file, _where):
+def saveGeoJsonData(db,_table, _file, _where):
+    """
+     save geojson file from PostGIS
+
+     Parameters
+     ----------
+     db : database class
+         Object of database class
+     _table : str
+         table name
+     _file : str
+         file name
+     _where : str
+         where statement of SQL
+     """
     query = "SELECT jsonb_build_object("
     query += "    'type',     'FeatureCollection',"
     query += "    'features', jsonb_agg(feature)"
@@ -64,15 +157,24 @@ def saveGeoJsonData(_table, _file, _where):
 
     query += ") row) features;"
 
-    db = database()
-    db.createConnection()
     rows = db.execute(query)
-    if len(rows) > 0 and len(rows[0]) > 0:
-        # Write it to a file
-        jsonfile = open(_file + '.geojson', 'w')
-        json.dump(rows[0][0], jsonfile)
+    save_file(rows, _file)
 
-def saveGeoJsonDataIntersectsDistrict(_table, _file, _where):
+def saveGeoJsonDataIntersectsDistrict(db,_table, _file, _where):
+    """
+    save geojson file which intersects on target district feature from PostGIS
+
+    Parameters
+    ----------
+    db : database class
+     Object of database class
+    _table : str
+     table name
+    _file : str
+     file name
+    _where : str
+     where statement of SQL
+    """
     query = "SELECT jsonb_build_object("
     query += "    'type',     'FeatureCollection',"
     query += "    'features', jsonb_agg(feature)"
@@ -91,21 +193,27 @@ def saveGeoJsonDataIntersectsDistrict(_table, _file, _where):
         query += " WHERE " + _where
     query += ") row) features;"
 
-    db = database()
-    db.createConnection()
     rows = db.execute(query)
-    if len(rows) > 0 and len(rows[0]) > 0:
-        # Write it to a file
-        jsonfile = open(_file + '.geojson', 'w')
-        json.dump(rows[0][0], jsonfile)
+    save_file(rows, _file)
 
-def create_qfield_data():
+def create_qfield_data(params):
+    """
+    MAIN FUNCTION: create geojson files each district from PostGIS
+
+    Parameters
+    ----------
+    params : object
+        List of arguments from command line
+    """
     base_layers = ["district", "sector", "cell", "village"]
     baseobj_layers = ["rivers_all_rw92", "lakes_all","roads_all","forest_cadastre","national_parks"]
     wss_layers = ["chamber", "pipeline", "pumping_station", "reservoir", "water_connection", "watersource", "wss"]
 
+    db = database(params)
+    db.createConnection()
+
     maindir = datetime.datetime.now().strftime('%Y%m%d_%H%M%S') + "_RWSS_Assets_data"
-    districts = getWssListEachDistrict()
+    districts = getWssListEachDistrict(db)
     for dist in districts:
         dist_id, district, wss_id_list = dist
 
@@ -119,20 +227,20 @@ def create_qfield_data():
 
         for layer in base_layers:
             filepath = "/".join([_datafolder, layer])
-            saveGeoJsonData(layer, filepath, "dist_id=" + str(dist_id))
+            saveGeoJsonData(db,layer, filepath, "dist_id=" + str(dist_id))
 
         for layer in wss_layers:
             filepath = "/".join([_datafolder, layer])
-            saveGeoJsonData(layer, filepath, "wss_id IN (" + wss_id_list + ")")
+            saveGeoJsonData(db,layer, filepath, "wss_id IN (" + wss_id_list + ")")
 
         for layer in baseobj_layers:
             filepath = "/".join([_datafolder, layer])
-            saveGeoJsonDataIntersectsDistrict(layer, filepath, "b.dist_id=" + str(dist_id))
+            saveGeoJsonDataIntersectsDistrict(db,layer, filepath, "b.dist_id=" + str(dist_id))
 
         shutil.make_archive("/".join([maindir,str(dist_id) + "_" + district]), 'zip', root_dir=_folder)
         shutil.rmtree(_folder)
     print("It created QField dataset at folder(" + os.path.abspath(maindir) + ")")
 
-
 if __name__ == "__main__":
-    create_qfield_data()
+    params = createArgumentParser()
+    create_qfield_data(params)

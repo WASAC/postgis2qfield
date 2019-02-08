@@ -1,0 +1,1 @@
+python postgis2qfield.py -d your_database -h localhost - P 5432 -u postgres -p your_password

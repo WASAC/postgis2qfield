@@ -11,20 +11,15 @@ The tool was designed for RWSS department of WASAC in Rwanda.
 
 To export table ````administrative boundary```` and ````water pipeline network````from database ````rwss_assets```` as user ````user```` to zipped QField datasets:
 
+Before running the script, kindly check the database settings at command line parameters.
 ````
-python postgis2qfield.py
+python postgis2qfield.py -d yourdatabase -H localhost - p 5432 -u user -w securePassword
 ````
 
-Before running the script, kindly check the database settings at ````database```` class on ```` postgis2qfield.py```` .
+If you want to filter only specific dictricts, use ````-l```` parameter to list ID of district by comma(,)
 
 ````
-class database:
-    def __init__(self):
-        self.host = 'localhost'
-        self.port = 5432
-        self.user = 'postgres'
-        self.password = 'your password'
-        self.database = 'rwss_gis'
+python postgis2qfield.py -l 51,52,53
 ````
 
 This script was developed by ````Jin IGARASHI, JICA Expert```` from ````The Project for Strengthening Operation and Maintenance of Rural Water Supply Systems in Rwanda- RWASOM````.
