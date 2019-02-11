@@ -223,6 +223,7 @@ def create_qfield_data(params):
 
         #copy template qfield file to district folder
         shutil.copy("./template/water_network_for_qfield.qgs", _folder + "/water_network_for_qfield.qgs")
+        shutil.copy("./template/template_gis_database.gpkg", _folder + "/template_gis_database.gpkg")
         shutil.copytree("./template/images", _folder + "/images")
 
         for layer in base_layers:
