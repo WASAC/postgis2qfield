@@ -20,7 +20,7 @@ class QfieldCreator(object):
         shutil.copytree("./template/images", self.folder + "/images")
 
         object_list = [
-            {"mapObj" : BaseMap(["district", "sector", "cell", "village"]), "filter" : "dist_id=" + str(self.district.dist_id)},
+            {"mapObj" : BaseMap(["district", "sector", "cell", "village","waterfacilities"]), "filter" : "dist_id=" + str(self.district.dist_id)},
             {"mapObj": BaseMap(["chamber", "pipeline", "pumping_station", "reservoir", "water_connection", "watersource", "wss"]),
              "filter": "wss_id IN (" + self.district.wss_id_list + ")"},
             {"mapObj": BaseMapIntersects(["rivers_all_rw92", "lakes_all", "roads_all", "forest_cadastre", "national_parks"]),
