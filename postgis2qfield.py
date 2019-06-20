@@ -1,8 +1,6 @@
-import datetime
 import argparse
-from lib.database import Database
-from lib.district import Districts
-from lib.qfieldcreator import QfieldCreator
+from lib.tasks import Tasks
+from lib.taskmanager import TaskManager
 
 def createArgumentParser():
     """
@@ -41,16 +39,9 @@ def createArgumentParser():
     return parser.parse_args()
 
 
-def create(maindir, dist, db):
-    creator = QfieldCreator(maindir, dist, db)
-    creator.create()
-
-
 if __name__ == "__main__":
-    params = createArgumentParser()
-    db = Database(params)
-    maindir = datetime.datetime.now().strftime('%Y%m%d_%H%M%S') + "_RWSS_Assets_data"
-    districts = Districts(params.dist_id)
-    district_list = districts.get_wss_list_each_district(db)
-    for dist in district_list:
-        create(maindir, dist, db)
+    args = createArgumentParser()
+    t = Tasks(args)
+    tasks = t.get_tasks()
+    tm = TaskManager(tasks)
+    tm.start()

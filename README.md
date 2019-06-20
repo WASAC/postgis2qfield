@@ -3,11 +3,19 @@
 ## postgis2qfield.py
 
 A simple tool for exporting from a PostGIS table to Zipped QField datasets. Assumes [Python 3.6+](http://www.python.org/download/), 
-[psycopg2](http://initd.org/psycopg/download/) are already installed and in your ````PATH````.
+[psycopg2](http://initd.org/psycopg/download/),
+[light-progress](https://pypi.org/project/light-progress/),
+are already installed and in your ````PATH````.
+
+The following is example of installation procedures by pip installation.
+````
+pip install psycopg2
+pip install light-progress
+````
 
 The tool was designed for RWSS department of WASAC in Rwanda.
 
-####Example usage:
+###Example usage:
 
 To export table ````administrative boundary```` and ````water pipeline network````from database ````rwss_assets```` as user ````user```` to zipped QField datasets:
 
