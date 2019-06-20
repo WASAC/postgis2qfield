@@ -21,8 +21,6 @@ class TaskManager(object):
             return
         task = self.tasks.pop()
         self.pb.forward()
-        if len(self.tasks) == 0:
-            self.pb.finish()
         return task
 
     def execute(self):
@@ -32,3 +30,5 @@ class TaskManager(object):
         t.execute()
         if len(self.tasks) > 0:
             self.execute()
+        else:
+            self.pb.finish()
