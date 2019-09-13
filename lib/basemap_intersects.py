@@ -35,5 +35,4 @@ class BaseMapIntersects(BaseMap):
         if _where is not None:
             query += " WHERE " + _where
         query += ") row) features;"
-
         return _database.execute(query)

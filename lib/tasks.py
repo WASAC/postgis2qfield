@@ -29,7 +29,7 @@ class Tasks(object):
             self.datafolder = "/".join([self.folder, 'data'])
 
         def execute(self):
-            os.makedirs(self.datafolder, exist_ok=True)
+            os.makedirs( self.folder, exist_ok=True)
 
             shutil.copy("./template/water_network_for_qfield.qgs", self.folder + "/water_network_for_qfield.qgs")
             shutil.copy("./template/template_gis_database.gpkg", self.folder + "/template_gis_database.gpkg")
@@ -42,7 +42,7 @@ class Tasks(object):
                 {"mapObj": BaseMapIntersects(["rivers_all_rw92", "lakes_all", "roads_all", "forest_cadastre", "national_parks"]),
                  "filter": "b.dist_id=" + str(self.district.dist_id)}]
             for obj in object_list:
-                obj['mapObj'].save(self.database, self.datafolder, obj['filter'])
+                obj['mapObj'].save(self.database, self.folder, obj['filter'])
 
             shutil.make_archive("/".join(
                 [self.main_dir, str(self.district.dist_id) + "_" + self.district.district]),

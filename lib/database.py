@@ -1,4 +1,5 @@
 import psycopg2
+import geopandas as gpd
 
 
 class Database(object):
@@ -48,3 +49,7 @@ class Database(object):
                 exit()
             rows = cur.fetchall()
             return rows
+
+    def get_geodataframe_from_postgis(self, sql):
+        gdf = gpd.read_postgis(sql, self.conn)
+        return gdf

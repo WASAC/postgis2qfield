@@ -1,4 +1,7 @@
 import json
+import os
+import geopandas as gpd
+
 
 class BaseMap(object):
     def __init__(self, layers):
@@ -42,13 +45,10 @@ class BaseMap(object):
         query += "    'properties', to_jsonb(row) - 'gid' - 'geom'"
         query += "  ) AS feature"
         query += "  FROM (SELECT * FROM " + _table
-
-        # If a WHERE statement was provided, add that
         if _where is not None:
             query += " WHERE " + _where
 
         query += ") row) features;"
-
         return _database.execute(query)
 
     def save(self, _database, _datafolder, _where):
@@ -56,3 +56,12 @@ class BaseMap(object):
             file_path = "/".join([_datafolder, layer])
             rows = self.get_data(_database, layer, _where)
             self.save_file(rows, file_path)
+
+            file_geojson = file_path + ".geojson"
+            try:
+                gdf = gpd.read_file(file_geojson)
+                gdf.to_file("{0}/existing_gis_database.gpkg".format(_datafolder), layer=layer, driver="GPKG")
+            except Exception as exc:
+                #print("{0}: Unable to export to Geopackage. Error was {1}".format(layer, str(exc)))
+                pass
+            os.remove(file_geojson)
