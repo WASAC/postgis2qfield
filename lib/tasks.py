@@ -26,6 +26,7 @@ class Tasks(object):
             self.database = db
             self.main_dir = main_dir
             self.folder = "/".join([main_dir, str(district.dist_id) + "_" + district.district])
+            self.folder = "{0}_{1}".format(self.folder, datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
             self.datafolder = "/".join([self.folder, 'data'])
 
         def execute(self):
@@ -45,8 +46,9 @@ class Tasks(object):
                 obj['mapObj'].save(self.database, self.folder, obj['filter'])
 
             shutil.make_archive("/".join(
-                [self.main_dir, str(self.district.dist_id) + "_" + self.district.district]),
-                'zip',
+                [self.main_dir, "{0}_{1}_{2}".format(
+                    str(self.district.dist_id), self.district.district,
+                    datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))]), 'zip',
                 root_dir=self.folder)
             shutil.rmtree(self.folder)
             #print("It exported {0}_{1}.zip".format(str(self.district.dist_id), self.district.district))
