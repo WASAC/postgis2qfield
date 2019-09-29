@@ -1,6 +1,6 @@
 import argparse
-from lib.tasks import Tasks
-from lib.taskmanager import TaskManager
+from common.tasks import Tasks
+from common.taskmanager import TaskManager
 
 def createArgumentParser():
     """
