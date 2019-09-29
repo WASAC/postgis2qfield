@@ -3581,10 +3581,8 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <editform tolerant="1">G:/マイドライブ/documents/Project/ルワンダ/地方給水施設運営維持管理/第3期/03_GIS/Lizmap Map data/rwss_inventory-testserver</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>G:/マイドライブ/documents/Project/ルワンダ/地方給水施設運営維持管理/第3期/03_GIS/Lizmap Map data/rwss_inventory-testserver/Followup training for data collection/training module/4 model districts data -QGIS3</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -5041,10 +5039,8 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <editform tolerant="1">G:/マイドライブ/documents/Project/ルワンダ/地方給水施設運営維持管理/第3期/03_GIS/Lizmap Map data/rwss_inventory-testserver</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>G:/マイドライブ/documents/Project/ルワンダ/地方給水施設運営維持管理/第3期/03_GIS/Lizmap Map data/rwss_inventory-testserver/Followup training for data collection/training module/4 model districts data -QGIS3</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -17263,10 +17259,8 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <editform tolerant="1">G:/マイドライブ/documents/Project/ルワンダ/地方給水施設運営維持管理/第3期/03_GIS/Lizmap Map data/rwss_inventory-testserver</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>G:/マイドライブ/documents/Project/ルワンダ/地方給水施設運営維持管理/第3期/03_GIS/Lizmap Map data/rwss_inventory-testserver/Followup training for data collection/training module/4 model districts data -QGIS3</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
