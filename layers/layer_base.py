@@ -29,6 +29,9 @@ class LayerBase(object):
         else:
             sql = self.get_sql()
         self.gdf = db.get_gdf_from_postgis(sql, self.parse_dates)
+        self.gdf.crs = {'init' :'epsg:4326'}
 
     def export2gpkg(self, output):
-        self.gdf.to_file(output, layer=self.table, driver="GPKG")
+        _gdf = self.gdf[self.gdf['geom'].notnull()]
+        if not _gdf.empty:
+            _gdf.to_file(output, layer=self.table, driver="GPKG")

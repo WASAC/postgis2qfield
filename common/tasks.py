@@ -35,7 +35,6 @@ class Tasks(object):
             self.main_dir = main_dir
             self.folder = "/".join([main_dir, str(district.dist_id) + "_" + district.district])
             self.folder = "{0}_{1}".format(self.folder, datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
-            self.datafolder = "/".join([self.folder, 'data'])
 
         def load_layers(self, layers, output, filter):
             for lyr in layers:
@@ -45,14 +44,13 @@ class Tasks(object):
 
         def execute(self):
             os.makedirs( self.folder, exist_ok=True)
+            shutil.copy("./template/water_network_for_qfield.qgs",
+                        "{0}/water_network_for_qfield_{1}.qgs".format(self.folder, self.district.district))
+            shutil.copy("./template/template_gis_database.gpkg", "{0}/template_gis_database.gpkg".format(self.folder))
+            shutil.copytree("./template/images", "{0}/images".format(self.folder))
 
             basemap_file = "{0}/{1}".format(self.folder, "basemap.gpkg")
             existing_file = "{0}/{1}".format(self.folder, "existing_gis_database.gpkg")
-
-            shutil.copy("./template/water_network_for_qfield.qgs", self.folder + "/water_network_for_qfield_{0}.qgs".format(self.district.district))
-            shutil.copy("./template/template_gis_database.gpkg", self.folder + "/template_gis_database.gpkg")
-            shutil.copytree("./template/images", self.folder + "/images")
-
             self.load_layers([District()], basemap_file, None)
             self.load_layers([Sector(), Cell(), Village(), River(), Lake(), Road(), Forest(),NationalPark()],
                              basemap_file, "dist_id=" + str(self.district.dist_id))
@@ -61,9 +59,5 @@ class Tasks(object):
                               WaterConnection(), WaterSource(), WaterSupplySystem()],
                              existing_file, "wss_id IN (" + self.district.wss_id_list + ")")
 
-            shutil.make_archive("/".join(
-                [self.main_dir, "{0}_{1}_{2}".format(
-                    str(self.district.dist_id), self.district.district,
-                    datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))]), 'zip',
-                root_dir=self.folder)
+            shutil.make_archive(self.folder, 'zip', root_dir=self.folder)
             shutil.rmtree(self.folder)
