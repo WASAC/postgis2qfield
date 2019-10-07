@@ -29,7 +29,7 @@ class LayerBase(object):
         else:
             sql = self.get_sql()
         self.gdf = db.get_gdf_from_postgis(sql, self.parse_dates)
-        self.gdf.crs = {'init' :'epsg:4326'}
+        self.gdf.crs = {'init': 'epsg:4326'}
 
     def export2gpkg(self, output):
         _gdf = self.gdf[self.gdf['geom'].notnull()]

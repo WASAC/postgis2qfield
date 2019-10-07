@@ -51,7 +51,5 @@ class Database(object):
             return rows
 
     def get_gdf_from_postgis(self, sql, parse_dates):
-        if parse_dates is None:
-            parse_dates = ['input_date', 'pump_installation_date', 'meter_installation_date', 'connection_date', 'disconnection_date']
         gdf = gpd.read_postgis(sql, self.conn, coerce_float=True,  parse_dates=parse_dates)
         return gdf

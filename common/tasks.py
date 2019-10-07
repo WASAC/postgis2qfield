@@ -46,7 +46,7 @@ class Tasks(object):
             basemap_file = "{0}/{1}".format(self.folder, "basemap.gpkg")
             existing_file = "{0}/{1}".format(self.folder, "existing_gis_database.gpkg")
 
-            os.makedirs( self.folder, exist_ok=True)
+            os.makedirs(self.folder, exist_ok=True)
             shutil.copy("./template/water_network_for_qfield.qgs",
                         "{0}/water_network_for_qfield_{1}.qgs".format(self.folder, self.district.district))
             shutil.copy("./template/template_gis_database.gpkg", "{0}/template_gis_database.gpkg".format(self.folder))
@@ -54,7 +54,7 @@ class Tasks(object):
             shutil.copytree("./template/images", "{0}/images".format(self.folder))
 
             self.load_layers([District()], basemap_file, None)
-            self.load_layers([Sector(), Cell(), Village(), River(), Lake(), Road(), Forest(),NationalPark()],
+            self.load_layers([Sector(), Cell(), Village(), River(), Lake(), Road(), Forest(), NationalPark()],
                              basemap_file, "dist_id=" + str(self.district.dist_id))
             self.load_layers([WaterFacilities()], existing_file, "dist_id=" + str(self.district.dist_id))
             self.load_layers([Chamber(), Pipeline(), PumpingStation(), Reservoir(),
