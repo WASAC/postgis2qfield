@@ -13,6 +13,8 @@ from layers.reservoir import Reservoir
 from layers.water_connection import WaterConnection
 from layers.watersource import WaterSource
 from layers.wss import WaterSupplySystem
+from layers.valve import Valve
+from layers.wtp import Wtp
 
 
 class Tasks(object):
@@ -58,7 +60,7 @@ class Tasks(object):
                              basemap_file, "dist_id=" + str(self.district.dist_id))
             self.load_layers([WaterFacilities()], existing_file, "dist_id=" + str(self.district.dist_id))
             self.load_layers([Chamber(), Pipeline(), PumpingStation(), Reservoir(),
-                              WaterConnection(), WaterSource(), WaterSupplySystem()],
+                              WaterConnection(), WaterSource(), WaterSupplySystem(), Valve(), Wtp()],
                              existing_file, "wss_id IN (" + self.district.wss_id_list + ")")
 
             shutil.make_archive(self.folder, 'zip', root_dir=self.folder)
