@@ -38,11 +38,15 @@ class Tasks(object):
             self.folder = "/".join([main_dir, str(district.dist_id) + "_" + district.district])
             self.folder = "{0}_{1}".format(self.folder, datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
 
-        def load_layers(self, layers, output, filter):
+        def load_layers_ogr(self, layers, output, filter):
             for lyr in layers:
                 lyr.set_filter(filter)
-                lyr.read(self.database)
-                lyr.export2gpkg(output)
+                lyr.export2gpkg_ogr(self.database, output)
+
+        def load_layers_pandas(self, layers, output, filter):
+            for lyr in layers:
+                lyr.set_filter(filter)
+                lyr.export2gpkg_pandas(self.database, output)
 
         def execute(self):
             basemap_file = "{0}/{1}".format(self.folder, "basemap.gpkg")
@@ -57,11 +61,11 @@ class Tasks(object):
             shutil.copy("./template/template_gis_database.gpkg", existing_file)
             shutil.copytree("./template/images", "{0}/images".format(self.folder))
 
-            self.load_layers([District()], basemap_file, None)
-            self.load_layers([Sector(), Cell(), Village(), River(), Lake(), Road(), Forest(), NationalPark()],
+            self.load_layers_pandas([District()], basemap_file, None)
+            self.load_layers_pandas([Sector(), Cell(), Village(), River(), Lake(), Road(), Forest(), NationalPark()],
                              basemap_file, "dist_id=" + str(self.district.dist_id))
-            self.load_layers([WaterFacilities()], existing_file, "dist_id=" + str(self.district.dist_id))
-            self.load_layers([Chamber(), Pipeline(), PumpingStation(), Reservoir(),
+            self.load_layers_pandas([WaterFacilities()], existing_file, "dist_id=" + str(self.district.dist_id))
+            self.load_layers_pandas([Chamber(), Pipeline(), PumpingStation(), Reservoir(),
                               WaterConnection(), WaterSource(), WaterSupplySystem(), Valve(), Wtp()],
                              existing_file, "wss_id IN (" + self.district.wss_id_list + ")")
 

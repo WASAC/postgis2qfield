@@ -1,5 +1,6 @@
 import psycopg2
 import geopandas as gpd
+from osgeo import ogr
 
 
 class Database(object):
@@ -53,3 +54,13 @@ class Database(object):
     def get_gdf_from_postgis(self, sql, parse_dates):
         gdf = gpd.read_postgis(sql, self.conn, coerce_float=True,  parse_dates=parse_dates)
         return gdf
+
+    def getPostGISConnectionString(self):
+        return 'PG:dbname={0} host={1} port={2} user={3} password={4}'.format(
+            self.database, self.host,self.port, self.user,self.password)
+
+    def get_layer_from_postgis(self, sql):
+        pg_connection_string = 'dbname={0} host={1} port={2} user={3} password={4}'.format(self.database, self.host, self.port, self.user, self.password)
+        pg_ds = ogr.Open('PG:' + pg_connection_string, update=1)
+        sql_lyr = pg_ds.ExecuteSQL(sql)
+        return sql_lyr
