@@ -58,7 +58,6 @@ class Tasks(object):
             shutil.copy("./template/water_network_for_qfield.qgs.cfg",
                         "{0}/water_network_for_qfield_{1}.qgs.cfg".format(self.folder, self.district.district))
             shutil.copy("./template/template_gis_database.gpkg", "{0}/template_gis_database.gpkg".format(self.folder))
-            shutil.copy("./template/template_gis_database.gpkg", existing_file)
             shutil.copytree("./template/images", "{0}/images".format(self.folder))
 
             self.load_layers_pandas([District()], basemap_file, None)
