@@ -11,15 +11,20 @@ A simple tool for exporting from a PostGIS table to Zipped QField datasets. Assu
 [Shapely](https://github.com/Toblerity/Shapely), 
 are already installed and in your ````PATH````.
 
-The following is example of installation procedures by pip installation.
+You can install using pip by requirements.txt as follow.
+````
+pip install -r requirements.txt
+````
+
+Or the following is example of installation procedures by pip installation manually.
 ````
 pip install psycopg2
 pip install light-progress
-pip install GDAL-2.4.1-cp37-cp37m-win_amd64.whl
-pip install Fiona-1.8.6-cp37-cp37m-win_amd64.whl
-pip install Shapely-1.6.4.post1-cp37-cp37m-win_amd64.whl
-pip install pyproj-2.2.2-cp37-cp37m-win_amd64.whl
-pip install geopandas-0.5.1-py2.py3-none-any.whl
+pip install GDAL-2.4.1-cp37-cp37m-win_amd64.whl or pip install GDAL==$(gdal-config --version | awk -F'[.]' '{print $1"."$2}')
+pip install fiona
+pip install shapely
+pip install pyproj
+pip install geopandas
 pip install descartes
 ````
 
@@ -40,7 +45,7 @@ To export table ````administrative boundary```` and ````water pipeline network``
 
 Before running the script, kindly check the database settings at command line parameters.
 ````
-python postgis2qfield.py -d yourdatabase -H localhost - p 5432 -u user -w securePassword
+python postgis2qfield.py -d yourdatabase -H localhost -p 5432 -u user -w securePassword
 ````
 
 If you want to filter only specific dictricts, use ````-l```` parameter to list ID of district by comma(,)
