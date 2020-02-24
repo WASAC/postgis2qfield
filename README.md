@@ -16,30 +16,9 @@ You can install using pip by requirements.txt as follow.
 pip install -r requirements.txt
 ````
 
-Or the following is example of installation procedures by pip installation manually.
-````
-pip install psycopg2
-pip install light-progress
-pip install GDAL-2.4.1-cp37-cp37m-win_amd64.whl or pip install GDAL==$(gdal-config --version | awk -F'[.]' '{print $1"."$2}')
-pip install fiona
-pip install shapely
-pip install pyproj
-pip install geopandas
-pip install descartes
-````
-
-Before installing geopandas, you can download whl file of GDAL, Fiona and Shapely from [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/). You can chose the file depends on your platform(32bit or 64bit, Python version, etc).
-
-If you failed to install geopandas by pip or wheel file, you can install from Git directly as below.
-````
-git clone https://github.com/geopandas/geopandas.git
-cd geopandas
-pip install .
-````
-
 The tool was designed for RWSS department of WASAC in Rwanda.
 
-###Example usage:
+### Example usage:
 
 To export table ````administrative boundary```` and ````water pipeline network````from database ````rwss_assets```` as user ````user```` to zipped QField datasets:
 
