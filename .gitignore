@@ -1,4 +1,4 @@
 /.idea
 /venv
-/common/__pycache__
-/layers/__pycache__/
+*/__pycache__
+*.pyc
