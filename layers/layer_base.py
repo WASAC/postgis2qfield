@@ -35,7 +35,7 @@ class LayerBase(object):
 
     def export2gpkg_pandas(self, db, output):
         _gdf = db.get_gdf_from_postgis(self.getSQL(), self.parse_dates)
-        _gdf.crs = {'init': 'epsg:4326'}
+        # _gdf.crs = {'init': 'epsg:4326'}
         _gdf = _gdf[_gdf['geom'].notnull()]
         if not _gdf.empty:
             _gdf.to_file(output, layer=self.table, driver="GPKG")
