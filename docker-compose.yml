@@ -12,4 +12,5 @@ services:
       # If you want to specify districts to be exported, please put here like "51,52,53"
       - districts=$DISTRICTS
     volumes:
+      - ./template:/usr/src/app/template
       - ./data:/usr/src/app/data
