@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+fiona = "==1.8.18"
+gdal = "==3.2.2"
+geopandas = "==0.9.0"
+light-progress = "==0.2.1.1"
+psycopg2-binary = "==2.8.6"
+shapely = "==1.7.1"
+
+[requires]
+python_version = "3.8"

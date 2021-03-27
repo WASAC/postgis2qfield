@@ -21,7 +21,7 @@ from layers.junction import Junction
 class Tasks(object):
     def __init__(self, args):
         self.db = Database(args)
-        self.maindir = datetime.datetime.now().strftime('%Y%m%d_%H%M%S') + "_RWSS_Assets_data"
+        self.maindir = args.output + datetime.datetime.now().strftime('%Y%m%d_%H%M%S') + "_RWSS_Assets_data"
         self.districts = Districts(args.dist_id)
         self.district_list = self.districts.get_wss_list_each_district(self.db)
 

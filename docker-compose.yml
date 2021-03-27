@@ -1,0 +1,15 @@
+version: '2'
+services:
+  postgis2qfield:
+    image: wasac/postgis2qfield:v1.0.1
+    build: .
+    environment:
+      - db_user=$DB_USER
+      - db_password=$DB_PASSWORD
+      - db_host=$DB_HOST
+      - db_port=$DB_PORT
+      - database=$DB_NAME
+      # If you want to specify districts to be exported, please put here like "51,52,53"
+      - districts=$DISTRICTS
+    volumes:
+      - ./data:/usr/src/app/data
