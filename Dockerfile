@@ -1,4 +1,4 @@
-FROM osgeo/gdal:ubuntu-small-3.2.2 AS builder
+FROM osgeo/gdal:ubuntu-small-3.2.2
 WORKDIR /usr/src/app
 
 RUN apt update \
