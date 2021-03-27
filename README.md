@@ -33,4 +33,15 @@ If you want to filter only specific dictricts, use ````-l```` parameter to list 
 python postgis2qfield.py -l 51,52,53
 ````
 
+## Run on Docker
+
+```zsh
+cp .env.example .env
+vi .env # modify database connection settings.
+docker-compose up
+```
+
+The data will be generated under `data` folder.
+
+---
 This script was developed by ````Jin IGARASHI, JICA Expert```` from ````The Project for Strengthening Operation and Maintenance of Rural Water Supply Systems in Rwanda- RWASOM````.

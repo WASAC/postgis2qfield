@@ -36,6 +36,9 @@ def createArgumentParser():
                         default="", type=str,
                         help="List of district ID which you want to export. For example, '51,52,53'")
 
+    parser.add_argument("-o", "--output", default="./data/", type=str,
+                        help="Output directory. Default is to export under data directory")
+
     return parser.parse_args()
 
 
