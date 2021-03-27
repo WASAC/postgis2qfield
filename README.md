@@ -1,4 +1,7 @@
 # PostGIS2QField
+![GitHub](https://img.shields.io/github/license/wasac/postgis2qfield)
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/wasac/postgis2qfield)
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/wasac/postgis2qfield)
 
 ## postgis2qfield.py
 
