@@ -10,7 +10,7 @@ services:
       - db_port=$DB_PORT
       - database=$DB_NAME
       # If you want to specify districts to be exported, please put here like "51,52,53"
-      - districts=$DISTRICTS
+      - districts=
     volumes:
       - ./template:/usr/src/app/template
       - ./data:/usr/src/app/data

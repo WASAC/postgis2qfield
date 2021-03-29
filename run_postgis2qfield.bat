@@ -1,1 +1,1 @@
-python postgis2qfield.py -d your_database -H localhost -p 5432 -u postgres -w your_password
+docker-compose up
