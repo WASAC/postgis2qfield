@@ -1,7 +1,7 @@
 version: '2'
 services:
   postgis2qfield:
-    image: wasac/postgis2qfield:v1.0.1
+    image: wasac/postgis2qfield:v1.0.2
     # build: .
     environment:
       - db_user=$DB_USER
