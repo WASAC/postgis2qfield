@@ -16,6 +16,7 @@ from layers.wss import WaterSupplySystem
 from layers.valve import Valve
 from layers.wtp import Wtp
 from layers.junction import Junction
+from layers.water_meter import WaterMeter
 
 
 class Tasks(object):
@@ -66,7 +67,7 @@ class Tasks(object):
                              basemap_file, "dist_id=" + str(self.district.dist_id))
             self.load_layers_pandas([WaterFacilities()], existing_file, "dist_id=" + str(self.district.dist_id))
             self.load_layers_pandas([Chamber(), Pipeline(), PumpingStation(), Reservoir(),
-                              WaterConnection(), WaterSource(), WaterSupplySystem(), Valve(), Wtp(), Junction()],
+                              WaterConnection(), WaterSource(), WaterSupplySystem(), Valve(), Wtp(), Junction(), WaterMeter()],
                              existing_file, "wss_id IN (" + self.district.wss_id_list + ")")
 
             shutil.make_archive(self.folder, 'zip', root_dir=self.folder)
